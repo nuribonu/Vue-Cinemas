@@ -2,6 +2,11 @@
     .container {
         max-width: 960px;
     }
+    
+    .films__cards {
+        grid-template-columns: repeat(2, 1fr);
+        row-gap: 40px;
+    }
 }
 
 @media(max-width: 992px) {
@@ -63,6 +68,20 @@
         justify-content: center;
     }
     
+    .films .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .films__cards {
+        grid-template-columns: 1fr;
+    }
+    
+    .films__desc {
+        text-align: center;
+    }
+    
 }
 
 @media(max-width: 576px) {
@@ -71,7 +90,7 @@
     }
     
     .banner {
-        height: 75vh;
+        height: 80vh;
     }
     
     .banner__title {
