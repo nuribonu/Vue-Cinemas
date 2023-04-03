@@ -127,6 +127,11 @@
       flex-direction: column;
       align-items: center;
     }
+
+    .footer .container {
+      flex-direction: column;
+      row-gap: 30px;
+    }
     
 }
 
@@ -176,5 +181,9 @@
 @media(max-width: 400px) {
     .banner__title {
         font-size: 29px;
+    }
+
+    .footer__text {
+      font-size: 14px;
     }
 }

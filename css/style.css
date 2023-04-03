@@ -1,5 +1,9 @@
 @import url(./fonts.css);
 
+html {
+  scroll-behavior: smooth;
+}
+
 :root {
   --black: #000;
   --white: #fff;
@@ -37,6 +41,16 @@ a {
 body {
   font-family: var(--font1);
   background: var(--bodyBg);
+  user-select: none;
+}
+
+*::-webkit-scrollbar {
+  width: 6px;
+  height: 5px;
+}
+*::-webkit-scrollbar-thumb {
+  background: var(--title);
+  border-radius: 3px;
 }
 
 .btn {
@@ -133,6 +147,12 @@ body {
   color: var(--white);
   max-width: 166px;
   width: 100%;
+}
+
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 999;
 }
 
 .header__nav {
@@ -628,3 +648,29 @@ body {
 .series__item:hover .series__icon {
   transform: scale(2) translateY(10px) rotateX(180deg);
 }
+
+.footer {
+  padding: 24px 0;
+  background: linear-gradient(90deg, #FF8C30 0%, #9F4700 100%);
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.8);
+}
+
+.footer .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer__list {
+  display: flex;
+  column-gap: 50px;
+}
+
+.footer__text {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 20px;
+  letter-spacing: 0.01em;
+  color: var(--white);
+}
+
